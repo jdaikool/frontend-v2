@@ -3899,10 +3899,10 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
-"@typechain/ethers-v5@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-5.0.0.tgz#6c91766b76c19886cf2c4833ded09611e117f92c"
-  integrity sha512-SnLnq6BCq2NBgm5xsQP8kRIawJ7gppLux8EOMb2ceoB5EuoW87AOyi6r1J5LTYe65/J59HjOVtaGCqsO+38Xrw==
+"@typechain/ethers-v5@^6.0.5":
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-6.0.5.tgz#39bbf9baadd0e8d9efad9d16c60152b7cd9a467b"
+  integrity sha512-KJh+EWuxmX1a17fQWS1ba8DCYcqK7UpdbqMZZwyfiv9FQfn8ZQJX17anbkCMOSU8TV3EvRuJ/vFEKGzKnpkO8g==
 
 "@types/aria-query@^4.2.0":
   version "4.2.2"
