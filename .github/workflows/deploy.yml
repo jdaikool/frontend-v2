@@ -26,7 +26,6 @@ jobs:
           node-version: "12"
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn test
         env:
           CI: true
       - run: aws s3 sync --acl public-read build/ $AWS_S3_BUCKET
