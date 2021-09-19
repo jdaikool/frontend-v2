@@ -1,0 +1,137 @@
+@import "../styles/theme";
+
+a {
+  text-decoration: none;
+  color: var(--text-darker);
+}
+
+div.spinner {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin: 20px;
+}
+
+div.poolOverview {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin: 20px;
+
+  button.button.large {
+    width: 135px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  h4.title {
+    width: 100%;
+    font-family: $font-family-title;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: $bold;
+    color: var(--text-title);
+  }
+
+  .tokens {
+    display: flex;
+    flex-direction: row;
+    grid-row: 5/6;
+  }
+
+  .table {
+    background: var(--background-element);
+    width: 100%;
+    box-shadow: var(--shadow);
+    border: 3px solid var(--outline);
+    border-radius: 27px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:hover {
+      box-shadow: var(--shadow-hover);
+      //padding: 30px;
+      border: 2px solid var(--outline);
+    }
+  }
+
+  .left {
+    display: grid;
+    grid-template-rows: 40px 24px 22px 10px 20px;
+  }
+
+  .right {
+    display: grid;
+    justify-content: end;
+    .margin {
+      margin-right: 24px;
+    }
+    .poolInfo {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-self: end;
+    }
+    .buttons {
+      justify-content: flex-end;
+      display: flex;
+      width: 445px;
+      align-self: end;
+      justify-self: end;
+      grid-template-columns: 176px 176px;
+      grid-column-gap: 16px;
+      -webkit-column-gap: 16px;
+      column-gap: 16px;
+    }
+  }
+
+  .title {
+    margin-right: 16px;
+  }
+
+  div.token {
+    display: flex;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & > img {
+      width: 18px;
+      margin-right: 4px;
+      vertical-align: text-top;
+    }
+  }
+
+  div.right {
+    & > div {
+      &.volume {
+        margin-right: 0;
+      }
+
+      span.label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-family: "Inter", monospace;
+        font-size: 18px;
+      }
+
+      .plus {
+        font-weight: $medium;
+        color: var(--text-selected);
+      }
+      .minus {
+        font-weight: $medium;
+        color: $error;
+      }
+    }
+  }
+}

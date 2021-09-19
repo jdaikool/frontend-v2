@@ -1,0 +1,58 @@
+@import "../styles/theme";
+
+button.button {
+  border: 2px solid #0e1747;
+  color: $text-black;
+  font-weight: $bold;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  padding: 4px 12px;
+  border-radius: 10px;
+  &:disabled {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background: #ff9900;
+    &:enabled:hover,
+    &:enabled:focus {
+      background-color: #ff9900;
+      color: $text-white;
+      box-shadow: var(--shadow-hover);
+    }
+  }
+
+  &.secondary {
+    background: $white;
+
+    &:enabled:hover,
+    &:enabled:focus {
+      color: $primary-blue;
+    }
+  }
+
+  &.ternary {
+    color: $black;
+    background: #0deef6;
+    font-weight: $bold;
+    letter-spacing: -0.06em;
+  }
+
+  &.large {
+    width: 176px;
+    height: 48px;
+  }
+
+  &.small {
+    height: 32px;
+  }
+}

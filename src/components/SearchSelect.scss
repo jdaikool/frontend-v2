@@ -1,0 +1,122 @@
+@import "../styles/theme";
+@import "../styles/viewports";
+
+.searchSelect {
+  padding: 8px 8px 8px 8px;
+  background-color: var(--primary-background);
+  max-height: 350px;
+  max-width: 500px;
+  overflow-y: auto;
+  @include breakpoint(sm) {
+    max-width: 100%;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 1.5px solid #c1c1c1;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  input {
+    flex: 1;
+    height: 32px;
+    background-color: var(--primary-background);
+    padding: 0 8px;
+    color: var(--primary-foreground);
+    font-size: 16px;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $normal;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: $disabled;
+      border: none;
+    }
+  }
+}
+.listItem:hover{
+  background: #efefef !important;
+  border-radius: 10px;
+}
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 15px;
+  user-select: none;
+  color: #000;
+  img {
+    height: 24px;
+    width: 24px;
+  }
+
+  > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 10px;
+  }
+  > :nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &.isAvailable {
+    &:hover,
+    &.isActive {
+      background-color: var(--option-hover);
+      cursor: pointer;
+    }
+  }
+  &.isUnavailable {
+    b,
+    p,
+    span {
+      color: var(--text-lightest);
+    }
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.textMinor {
+  font-size: 12px;
+  color: var(--text-lighter);
+}
+
+.tagWrapper {
+  display: flex;
+  align-items: center;
+  > .unavailableTag,
+  .virtualSwapTag {
+    border: 1px solid var(--text-lightest);
+    border-radius: 4px;
+    padding: 1px 2px;
+    font-weight: 700;
+    font-size: 11px;
+    display: inline-block;
+    margin-left: 8px;
+    line-height: 14px;
+  }
+}
+
+.unavailableTag {
+  color: var(--text-lightest);
+  border: 1px solid var(--text-lightest);
+}
+
+.virtualSwapTag {
+  color: $primary;
+  border: 1px solid var(--outline);
+}
