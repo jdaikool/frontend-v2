@@ -16,11 +16,13 @@ import { useTranslation } from "react-i18next"
 interface Props {
   poolName: PoolName
   isOnlyStake: boolean
+  Stakable: boolean
   data: PoolDataType | null
 }
 
 function PoolOverview({
   isOnlyStake,
+  Stakable,
   data,
   poolName,
 }: Props): ReactElement | null {
@@ -104,12 +106,16 @@ function PoolOverview({
             </div>
           </div>
           <div className="buttons">
-            <Button
-              kind="secondary"
-              onClick={() => histroy.replace("stake", { poolName })}
-            >
-              {t("stake")}
-            </Button>
+            {Stakable && (
+              <>
+                <Button
+                  kind="secondary"
+                  onClick={() => histroy.push("stake", { poolName: poolName })}
+                >
+                  {t("stake")}
+                </Button>
+              </>
+            )}
             {!isOnlyStake && (
               <>
                 <Button

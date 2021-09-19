@@ -65,6 +65,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: true,
+      Stakable: true,
     },
     {
       poolData: avaxgdlPoolData,
@@ -73,6 +74,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: true,
+      Stakable: true,
     },
     {
       poolData: wbtcWbtcePoolData,
@@ -81,6 +83,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: ethWethePoolData,
@@ -89,6 +92,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: usdtUsdtePoolData,
@@ -97,6 +101,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: renbtcPoolData,
@@ -105,6 +110,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: daiDaiePoolData,
@@ -113,6 +119,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: daieUsdtePoolData,
@@ -121,6 +128,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: false,
+      Stakable: true,
     },
     {
       poolData: daiPoolData,
@@ -129,6 +137,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: ethPoolData,
@@ -137,6 +146,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: dwethPoolData,
@@ -145,6 +155,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: usdtPoolData,
@@ -153,6 +164,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: dusdtPoolData,
@@ -161,6 +173,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: false,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: btcPoolData,
@@ -169,6 +182,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: usdtDaiPoolData,
@@ -177,6 +191,7 @@ function Pools(): ReactElement {
       type: PoolTypes.OTHER,
       isOutdated: true,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: yakPoolData,
@@ -185,6 +200,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: false,
+      Stakable: false,
     },
     {
       poolData: usdcePoolData,
@@ -193,6 +209,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: false,
+      Stakable: true,
     },
     {
       poolData: tsdPoolData,
@@ -201,6 +218,7 @@ function Pools(): ReactElement {
       type: PoolTypes.LIVE,
       isOutdated: false,
       isOnlyStake: false,
+      Stakable: true,
     },
   ]
 
@@ -238,6 +256,7 @@ function Pools(): ReactElement {
                 key={key}
                 data={item.poolData}
                 isOnlyStake={item.isOnlyStake}
+                Stakable={item.Stakable}
                 poolName={item.poolName as PoolName}
               />
             )

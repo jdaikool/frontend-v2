@@ -310,18 +310,19 @@ export default function usePoolData(
         (gainUsdPerYear /
           (totalStakedLpAmountUSDJs || totalLpTokenBalanceUSDJs)) *
         100
-
-      console.debug({
-        apy,
-        gainUsdPerYear,
-        poolGDLPerYearJs,
-        poolName,
-        gdlPriceUSDJs,
-        totalLpTokenBalanceUSDJs,
-        totalStakedLpAmountUSDJs,
-        lpTokenPriceUSDJs,
-        totalLpTokenBalanceJs,
-      })
+      if (poolName === "USDT.e-USDC.e Pool") {
+        console.debug({
+          apy,
+          gainUsdPerYear,
+          poolGDLPerYearJs,
+          poolName,
+          gdlPriceUSDJs,
+          totalLpTokenBalanceUSDJs,
+          totalStakedLpAmountUSDJs,
+          lpTokenPriceUSDJs,
+          totalLpTokenBalanceJs,
+        })
+      }
 
       const poolTokens = POOL.poolTokens.map((token, i) => ({
         symbol: token.symbol,

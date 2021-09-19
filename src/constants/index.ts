@@ -1029,7 +1029,7 @@ export const DAIE_USDTE_POOL_NAME = "DAI.e-USDT.e Pool"
 export const DAIE_USDTE_POOL_ID = 19
 
 export const USDCE_POOL_NAME = "USDT.e-USDC.e Pool"
-export const USDCE_POOL_ID = 20
+export const USDCE_POOL_ID = 22
 
 export const TSD_POOL_NAME = "USDT.e-TSD Pool"
 export const TSD_POOL_ID = 21
