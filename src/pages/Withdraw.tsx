@@ -47,16 +47,20 @@ function Withdraw(): ReactElement {
       ) {
         return
       }
-      const tokenInputSum = parseUnits(
-        POOL.poolTokens
-          .reduce(
-            (sum, { symbol }) =>
-              sum + (+withdrawFormState.tokenInputs[symbol].valueRaw || 0),
-            0,
+      let _tokenInputSum = 0
+      for (const token of POOL.poolTokens) {
+        if (token.symbol != "mYAK") {
+          _tokenInputSum += Number(
+            withdrawFormState.tokenInputs[token.symbol].valueRaw,
           )
-          .toFixed(18),
-        18,
-      )
+        } else {
+          _tokenInputSum +=
+            Number(withdrawFormState.tokenInputs[token.symbol].valueRaw) /
+            1000000
+        }
+      }
+      const tokenInputSum = parseUnits(_tokenInputSum.toString(), 18)
+      console.log("hahaha:A:SDD", tokenInputSum.toString())
       let withdrawLPTokenAmount
       if (poolData.totalLocked.gt(0) && tokenInputSum.gt(0)) {
         withdrawLPTokenAmount = await swapContract.calculateTokenAmount(

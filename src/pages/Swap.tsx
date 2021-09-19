@@ -200,7 +200,6 @@ function Swaps(): ReactElement {
       if (amountToGive.gt(tokenBalances[formStateArg.from.symbol])) {
         error = t("insufficientBalance")
       }
-      console.log(tokenIndexFrom, tokenIndexTo)
       if (tokenIndexFrom > -1 && tokenIndexTo > -1) {
         amountToReceive = await swapContract.calculateSwap(
           tokenIndexFrom,
@@ -224,10 +223,11 @@ function Swaps(): ReactElement {
                   .div(tokenFrom.symbol == "mYAK" ? 1000000 : 1),
               ),
               amountToReceive.mul(
-                BigNumber.from(10).pow(
-                  18 - tokenTo?.decimals[chainId || ChainId["FUJI"]],
-                ),
+                BigNumber.from(10)
+                  .pow(18 - tokenTo?.decimals[chainId || ChainId["FUJI"]])
+                  .div(tokenTo.symbol == "mYAK" ? 1000000 : 1),
               ),
+
               poolData?.virtualPrice,
             ),
             exchangeRate: calculateExchangeRate(
